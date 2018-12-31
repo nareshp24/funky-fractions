@@ -14,7 +14,6 @@ def gcd(a, b):
     return a
 
 
-
 class Fraction:
 
     #constructor
@@ -44,8 +43,7 @@ class Fraction:
 
     #display method
     def show(self):
-        '''displays the fraction'''
-        
+        '''displays the fraction'''     
         print(self._num, "/", self._den)
 
     #overriding the default __str__
@@ -60,15 +58,7 @@ class Fraction:
 
     #Greatest common divisor as a method 
     def gcd(self):
-    	'''
-    		returns the Greatest Common Divisor of numerator and denominator of fraction.
-
-    		Example
-    		-------
-    		>>>common = Fraction(5, 10).gcd()
-    		>>>common
-    		5
-    	'''
+    	''' returns the Greatest Common Divisor of numerator and denominator of fraction '''
     	
     	a = self._num
     	b = self._den
@@ -115,7 +105,6 @@ class Fraction:
         
         newnum = (self._num * rhs._den) - (self._den * rhs._num)
         newden = self._den * rhs._den
-            
         #common = Fraction(newnum, newden).gcd()
 
         #return Fraction(newnum//common, newden//common)
