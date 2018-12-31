@@ -27,7 +27,7 @@ class Fraction:
 
         bottom = int(bottom)
         if bottom == 0:
-            raise ValueError("denominator should be a non-zero 'int'")
+            raise ZeroDivisionError("denominator should be a non-zero 'int'")
 
         #the variable self._common is the gcd of numerator and denominator which is calculated only if reduced == True
         self._common = 1
@@ -227,7 +227,7 @@ class Fraction:
     #check if fraction is a proper fraction
     def is_proper(self):
         ''' returns true if the numerator greater than or equal to denom'''
-        return self._num >= self._den
+        return self._num <= self._den
 
     #check if fraction is an improper fraction
     def is_improper(self):
