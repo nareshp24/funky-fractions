@@ -33,13 +33,8 @@ class Fraction:
         if reduced:
             self._common = abs(gcd(top, bottom))
         
-        if bottom < 0:
-            self._num = -int(top)//self._common
-            self._den = -bottom//self._common
-
-        else:
-            self._num = int(top)//self._common
-            self._den = bottom//self._common
+        self._num = ((abs(bottom)//bottom) * int(top))//self._common
+        self._den = abs(int(bottom))//self._common
 
     #display method
     def show(self):
@@ -65,7 +60,6 @@ class Fraction:
 
     	while b != 0:
     		a, b = b, a % b
-
     	return a
             
     #add (+) method
