@@ -232,7 +232,7 @@ class Fraction:
     #check if fraction is an improper fraction
     def is_improper(self):
         ''' returns true if the numerator greater than or equal to denom'''
-        return self._num > self._den
+        return self._num < self._den
 
     #get numerator of the fraction
     def get_numerator(self):
